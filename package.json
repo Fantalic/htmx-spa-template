@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "python -m http.server 8000"
+    "serve": "sh serve.sh"
   },
   "author": "",
   "license": "ISC",

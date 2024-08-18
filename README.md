@@ -13,7 +13,7 @@
 ## Usage
 
 1. Clone the repository.
-2. Open `index.html` in your browser or serve it using a local server.
+2. serve `index.html` and `app.js` it using a local server (npm run serve).
 3. Modify the JavaScript functions to implement your desired functionality.
 
 (readme text created with perplexity.ai/ :P)
