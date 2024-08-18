@@ -1,8 +1,3 @@
-// const htmx = require('https://unpkg.com/htmx.org@2.0.1');
-
-console.log("HTMX")
-console.log(htmx)
-
 function fakeRequest(event) {
     const hxGetValue = event.detail.elt.getAttribute('hx-get');
     if (!router[hxGetValue]) 
@@ -30,16 +25,6 @@ function fakeRequest(event) {
     );
 }
 
-document.body.addEventListener('htmx:afterRequest', function(event) {
-    console.log("TEST AFTER REQUEST")
-    console.log(event)
-});
-
-// Listen for the htmx:configRequest event
-// document.body.addEventListener('htmx:configRequest', 
-// document.querySelector('[hx-get]').addEventListener('htmx:beforeRequest', fakeResponseEvent);
-document.body.addEventListener('htmx:beforeRequest', fakeRequest)
-
 const router = {
     data: function(req, res) {
         res.innerHTML = '<p>This is some dynamically loaded content!</p>';
@@ -49,7 +34,4 @@ const router = {
     },
 };
 
-// // Define the /data endpoint
-// app.get('/data', (req, res) => {
-//     res.send('<p>This is some dynamically loaded content!</p>');
-// });
+document.body.addEventListener('htmx:beforeRequest', fakeRequest)
